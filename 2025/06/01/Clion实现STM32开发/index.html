@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo 编写步骤和程序, guobuguo的回忆录">
+    <meta name="keywords" content="Clion实现STM32开发, guobuguo的回忆录">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo 编写步骤和程序 | guobuguo的回忆录</title>
+    <title>Clion实现STM32开发 | guobuguo的回忆录</title>
     <link rel="icon" type="image/png" href="/Bigglass.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo 编写步骤和程序</h1>
+                    <h1 class="description center-align post-title">Clion实现STM32开发</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/STM32%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">STM32开发</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E4%BC%91%E6%81%AF%E6%97%B6%E9%97%B4/" class="post-category">
+                                休息时间
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -443,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-06-28
+                    2025-06-01
                 </div>
                 
 
@@ -464,18 +477,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>一：步骤</p>
-<p>1.进入搭建的Hexo的文件夹，选择Open Git Bash Here在出现的输入框内输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;输入自己的命名文件&quot;</span><br></pre></td></tr></table></figure>
-
-<p>成功后会出现如下所示</p>
-<p>![](D:\OneDriver\OneDrive\桌面\2024-06-28 212825.png)</p>
-<p>2.找到..\source_posts目录下的自己命名的.md文件，使用Markdown软件打开.md文件，输入自己编写的文字和程序或者粘贴图片。。</p>
-<p>编辑完后，输入程序进行文件的上传和展示，输入的程序如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   ##清理之前的上传的残留</span><br><span class="line">hexo g       ##hexo g为hexo generate简称，目的为生成静态文件夹/public，Markdown向Html转换</span><br><span class="line">hexo d       ##hexo d为hexo deploy将静态文件上传到服务器</span><br></pre></td></tr></table></figure>
-
-<p>##自<a target="_blank" rel="noopener" href="https://fuguigui.github.io/hexo2/">一次完整的Hexo写作流程 | Fululu (fuguigui.github.io)</a>而来</p>
-<p>注：文章的tags和categories的”:“后面必须要有一个空格，否则格式错误显示不出来</p>
+                <h1 id="1-开发环境配置"><a href="#1-开发环境配置" class="headerlink" title="1.开发环境配置"></a>1.开发环境配置</h1><p>(1)STM32CUBEMX安装，需要注意STM32CUBEMX版本不能太低，太低的版本没有Cmake，无法实现Clion的Cmake的配置，版本如下：</p>
+<p><img src="/../iamsges_/STM32Cubemx%E7%89%88%E6%9C%AC.png" alt="图片"></p>
+<p>(2)STM32CUBEClt的安装，注意安装完成后需要配置期环境变量地址：</p>
+<p>如下一个用户地址和一个系统地址</p>
+<p><img src="/../iamsges_/STM32CubeClt%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%9C%B0%E5%9D%80%E7%94%A8%E6%88%B7Path%E8%AE%BE%E7%BD%AE.png" alt="图片"></p>
+<p><img src="/../iamsges_/STM32CubeClt%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%9C%B0%E5%9D%80%E7%B3%BB%E7%BB%9FPath%E8%AE%BE%E7%BD%AE.png" alt="图片"></p>
+<p>(3)Clion配置，第一次新建文档，需要配置工具链和Cmake，按照如下所示的步骤配置和选择就可以</p>
+<p><img src="/../iamsges_/Clion%E5%B7%A5%E5%85%B7%E9%93%BE%E9%85%8D%E7%BD%AE.png" alt="图片"></p>
+<p><img src="/../iamsges_/Clion%E7%9A%84Cmake%E9%85%8D%E7%BD%AE.png" alt="图片"></p>
+<p>至此便完成了Clion的环境配置和软件安装。</p>
 
                 
             </div>
@@ -502,7 +513,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2024/06/28/Hexo-%E7%BC%96%E5%86%99%E6%AD%A5%E9%AA%A4%E5%92%8C%E7%A8%8B%E5%BA%8F/">http://example.com/2024/06/28/Hexo-%E7%BC%96%E5%86%99%E6%AD%A5%E9%AA%A4%E5%92%8C%E7%A8%8B%E5%BA%8F/</a>
+                    <a href="http://example.com/2025/06/01/Clion%E5%AE%9E%E7%8E%B0STM32%E5%BC%80%E5%8F%91/">http://example.com/2025/06/01/Clion%E5%AE%9E%E7%8E%B0STM32%E5%BC%80%E5%8F%91/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,7 +550,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/STM32%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">STM32开发</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -711,13 +726,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2025/06/01/Clion%E5%AE%9E%E7%8E%B0STM32%E5%BC%80%E5%8F%91/">
+                <a href="/2025/07/05/STM32%E7%A7%BB%E6%A4%8DFreeRTOS/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Clion实现STM32开发">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="STM32移植FreeRTOS">
                         
-                        <span class="card-title">Clion实现STM32开发</span>
+                        <span class="card-title">STM32移植FreeRTOS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -728,7 +743,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-06-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-07-05
                         </span>
                         <span class="publish-author">
                             
@@ -745,8 +760,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/STM32%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">STM32开发</span>
+                    <a href="/tags/FreeRTOS/">
+                        <span class="chip bg-color">FreeRTOS</span>
                     </a>
                     
                 </div>
@@ -760,13 +775,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/06/15/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95Blog/">
+                <a href="/2024/06/28/Hexo-%E7%BC%96%E5%86%99%E6%AD%A5%E9%AA%A4%E5%92%8C%E7%A8%8B%E5%BA%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="第一个测试Blog">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Hexo 编写步骤和程序">
                         
-                        <span class="card-title">第一个测试Blog</span>
+                        <span class="card-title">Hexo 编写步骤和程序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -777,7 +792,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-06-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-06-28
                             </span>
                         <span class="publish-author">
                             
